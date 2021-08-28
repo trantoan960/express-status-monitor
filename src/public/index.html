@@ -106,7 +106,10 @@
         <p>Status customize page made by <a href="https://www.facebook.com/trantoan960">Tran Toan</a> with &#9829; with Socket.io & Chart.js</p>
       </div>
     </div>
-    <script src="/vendors/customize.js">
+    <script>
+      var port = '{{port}}'
+      var socketPath = '{{socketPath}}'
+      {{{script}}}
     </script>
   </body>
 </html>

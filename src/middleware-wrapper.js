@@ -51,7 +51,7 @@ const middlewareWrapper = config => {
           }
         }
 
-        res.send(render(data));
+        res.set("Content-Security-Policy", "default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'").send(render(data));
       });
     } else {
       if (!req.path.startsWith(validatedConfig.ignoreStartsWith)) {
